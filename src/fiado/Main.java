@@ -23,10 +23,10 @@ public class Main {
 
 		int total = somaWhile(consumidor.fiados);
 
-		if (total > 0) {
+		if (total > 100) {
 			System.out.println("Cliente: " + consumidor.nome + " deve: " + total);
 		} else {
-			System.out.println("Valor do fiado não é aceitável");
+			System.out.println("Valor do fiado é menor que R$100");
 		}
 
 	}

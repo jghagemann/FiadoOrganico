@@ -6,15 +6,17 @@ public class Main {
 
 	public static void main(String[] args) {
 
-
-
 		int[] fiados = new int[10];
 
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Informe o nome do cliente: ");
 		String nome = scanner.nextLine();
-		Consumidor consumidor = new Consumidor(nome);
+
+		System.out.print("Informe o telefone do cliente: ");
+		String telefone = scanner.nextLine();
+
+		Consumidor consumidor = new Consumidor(nome, telefone);
 
 		for (int i = 0; i < fiados.length; i++) {
 			System.out.print("Informe o valor da compra: ");
@@ -25,9 +27,11 @@ public class Main {
 		int total = consumidor.getFiado();
 
 		if (total > 100) {
-			System.out.println("Cliente: " + consumidor.getNome() + " deve: " + total);
+			System.out.println("Cliente: " + consumidor.getNome() + " deve: " + total + " e o telefone para contato é "
+					+ consumidor.getTelefone());
 		} else {
-			System.out.println("Cliente: " + consumidor.getNome() + " deve: " + total);
+			System.out.println("Cliente: " + consumidor.getNome() + " deve: " + total + " e o telefone para contato é "
+					+ consumidor.getTelefone());
 		}
 
 	}
